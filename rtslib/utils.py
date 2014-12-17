@@ -560,6 +560,10 @@ def is_valid_wwn(wwn_type, wwn, wwn_list=None):
             and re.match(
                 "[0-9A-Fa-f]{8}(-[0-9A-Fa-f]{4}){3}-[0-9A-Fa-f]{12}$", wwn):
         return True
+    elif wwn_type == 'qla2xxx_wwn' \
+            and re.match(
+                "[0-9A-Fa-f]{2}(:[0-9A-Fa-f]{2}){7}$", wwn):
+        return True
     else:
         return False
 

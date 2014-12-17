@@ -347,6 +347,9 @@ class Config(object):
         elif val_type == 'naa':
             if is_valid_wwn('naa', value):
                 valid_value = value
+        elif val_type == 'qla2xxx_wwn':
+            if is_valid_wwn('qla2xxx_wwn', value):
+                valid_value = value
         elif val_type == 'backend':
             if is_valid_backend(value, parent):
                 valid_value = value
